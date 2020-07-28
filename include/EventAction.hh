@@ -1,0 +1,43 @@
+
+ 
+#ifndef EventAction_h
+#define EventAction_h 1
+
+#include "globals.hh"
+#include "G4UserEventAction.hh"
+#include "TFile.h"
+#include "TString.h"
+#include "EventActionMessenger.hh"
+
+class G4Event;
+class DataManager;
+class EventActionMesseneger;
+
+//-----------------------------------------------------------------------------
+
+class EventAction : public G4UserEventAction
+{
+public:
+  EventAction();
+  ~EventAction();
+  
+public:
+  virtual void BeginOfEventAction(const G4Event* evnt);
+  virtual void EndOfEventAction(const G4Event* evnt);
+  void SetOutFileName(TString name){fOutFileName=name;};
+  void PrintOutFileName(){G4cout<<"Output saved as "<<fOutFileName<<"\n"<<G4endl;};
+  G4int PrepareOutput();
+  void CloseOutput();
+  
+private:
+  DataManager*  data;
+  TFile* fOutFile;
+  TString fOutFileName;
+  EventActionMessenger* fEventMessenger;
+};
+
+//-----------------------------------------------------------------------------
+
+#endif
+
+

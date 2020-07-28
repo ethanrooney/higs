@@ -1,0 +1,28 @@
+########Pre-Initialization
+###Include additional physics processes
+###G4StandardEMProcesses are included as default
+#/Hinda/physics/Print
+#/Hinda/physics/AddPhysicsList ExtraEM
+#/Hinda/physics/AddPhysicsList QGSP_BIC_HP
+#
+#
+##########Initialize
+/run/initialize
+#
+###Set mode for PrimaryGeneratorAction. See PrimaryGeneratorAction.hh for enum list 
+###0= -z of world,   1=center of world,   2=entire target volume,   3=beam spot on target
+/Hinda/generator/Mode 2
+/Hinda/generator/setBeamDiameter 30.5 mm
+/Hinda/generator/setTmin 85 MeV
+/Hinda/generator/setTmax 85 MeV
+/Hinda/generator/setThetaMin 0 deg
+/Hinda/generator/setThetaMax 180 deg
+/Hinda/generator/setPhiMin 0 deg
+/Hinda/generator/setPhiMax 360 deg
+#
+#
+#######Set output file
+/Hinda/event/SetOutputFile /home/mhs24/experiments/lD2_june2016/simulations/ld2_85mev_monoenergetic_check.root
+#
+/gun/particle gamma
+/run/beamOn 50000000
