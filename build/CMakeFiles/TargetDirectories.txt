@@ -1,8 +1,0 @@
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/install/strip.dir
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/install/local.dir
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/HindaSim.dir
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/edit_cache.dir
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/myHindaSim.dir
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/install.dir
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/rebuild_cache.dir
-/home/ethan/geant/marks-hinda/HindaSim/build/CMakeFiles/list_install_components.dir
