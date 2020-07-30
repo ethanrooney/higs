@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/geant/marks-hinda/HindaSim
+CMAKE_SOURCE_DIR = /home/etuxr/builds/higs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/geant/marks-hinda/HindaSim
+CMAKE_BINARY_DIR = /home/ethan/geant/higs-build
 
 #=============================================================================
 # Targets provided globally by CMake.

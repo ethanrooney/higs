@@ -55,7 +55,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(
   //*****************
   fIsBeamProfile = false;
   TCanvas c;// required to prevent seg fault on end-of-run because of loading hist from file
-  TFile f("/home/ethan/geant/marks-hinda/HindaSim/beamCalc.root");
+  TFile f("/home/etuxr/builds/higs/beamCalc.root");
   fBeamProfileHist = (TH1D*)f.Get("hbeam85mev");
   fBeamProfileHist->SetDirectory(0);
   f.Close();
