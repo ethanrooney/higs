@@ -1,0 +1,48 @@
+This is a geant simulation of the HINDA Detector set up at the High Intensity Gamma Source.
+
+This README was developed while doing a fresh installation of geant4-10.6.2 on a LINUX installation from this link:
+
+https://github.com/Geant4/geant4/releases/tag/v10.6.2
+
+
+To use this simulation you must have GEANT4 installed according to the following instructions:
+http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/InstallationGuide/html/gettingstarted.html
+
+Untarred the geant4 source in a directory (Assuming a directory called builds in user home directory).
+
+From the location of the geant4 download run:
+
+tar -xf geant4-10.6.2.tar.gz -C /home/etuxr/builds/geant4-10.6.2/
+mkdir /home/etuxr/builds/geant4-10.6.2-build/
+cd /home/etuxr/builds/geant4-10.6.2-build/
+
+cmake -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_OPENGL_X11=ON -DCMAKE_INSTALL_PREFIX=/home/etuxr/builds/geant4-10.6.2-install/ .
+make
+make install
+
+This should yeild a functional version of GEANT4
+
+
+Then to install the HINDA simulation run
+
+cd /home/etuxr/builds/
+git clone git@github.com:ethanrooney/higs
+mkdir higs-build
+cd higs-build
+cmake ../higs
+make
+
+
+NOTE the file higs/Makefile will need to be edited to properly provide the correct directory.
+NOTE the location of beamCalc.root is hardcoded in higs/src/PrimaryGeneratorAction.cc
+
+#############################################################################################################
+
+NOTE the file /home/etuxr/builds/geant4-10.6.2-install/bin/geant4.sh needs to be sourced in the .bashrc
+NOTE for versions of ROOT before 6.20 you must declair ROOT_DIR 
+
+Example of lines to add to .bashrc
+
+export ROOT_DIR="/usr/bin/root"
+source /home/etuxr/builds/geant4-10.6.2-install/bin/geant4.sh 
+source /usr/bin/thisroot.sh

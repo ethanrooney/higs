@@ -1,0 +1,1 @@
+Note: to switch between configurations for running background or scattering, the DataManager and EventAction files need to be edited, including the Fill/Write Tree routines!
