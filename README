@@ -35,4 +35,14 @@ make
 
 NOTE the file higs/Makefile will need to be edited to properly provide the correct directory.
 NOTE the location of beamCalc.root is hardcoded in higs/src/PrimaryGeneratorAction.cc
+
+#############################################################################################################
+
 NOTE the file /home/etuxr/builds/geant4-10.6.2-install/bin/geant4.sh needs to be sourced in the .bashrc
+NOTE for versions of ROOT before 6.20 you must declair ROOT_DIR 
+
+Example of lines to add to .bashrc
+
+export ROOT_DIR="/usr/bin/root"
+source /home/etuxr/builds/geant4-10.6.2-install/bin/geant4.sh 
+source /usr/bin/thisroot.sh
