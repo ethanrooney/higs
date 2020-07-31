@@ -27,9 +27,9 @@ Then to install the HINDA simulation run
 
 cd /home/etuxr/builds/
 git clone git@github.com:ethanrooney/higs
-mkdir higs-build
-cd higs-build
-cmake ../higs
+mkdir build
+cd build
+cmake ../HindaSim
 make
 
 
