@@ -4,6 +4,7 @@
 #
 # Sets some default verbose
 #
+/run/initialize
 /control/verbose 2
 /run/verbose 2
 #
@@ -11,7 +12,9 @@
 # (Edit the next line(s) to choose another graphics system)
 #
 #This is standard viewer
-/vis/open OGLIX 600x600+0+0
+/vis/open OGL 600x600-0+0
+#/vis/sceneHandler/create OGL
+#/vis/viewer/create ! ! 600x600-0+0
 #
 #Not to be used
 ####/vis/open OGLSXm
@@ -49,12 +52,11 @@
 ###Include additional physics processes
 ###G4StandardEMProcesses are included as default
 #/Hinda/physics/Print
-/Hinda/physics/AddPhysicsList ExtraEM
+#/Hinda/physics/AddPhysicsList ExtraEM
 #/Hinda/physics/AddPhysicsList QGSP_BIC_HP
 #
 #
 #Initialize
-/run/initialize
 ###Set mode for PrimaryGeneratorAction. See PrimaryGeneratorAction.hh for enum list 
 ###0= -z of world   1= center of world   2= entire target volume 3=beam spot target
 /Hinda/generator/Mode 2
